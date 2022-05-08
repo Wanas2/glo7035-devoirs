@@ -1,0 +1,15 @@
+Installer le package py2neo:
+pip install py2neo
+
+Rouler mon image neo4j:
+docker stop devoir2_neo4j
+docker system prune -f
+docker run --name devoir2_neo4j -d -p 7474:7474 -p 7687:7687 neo4j:3.5.8
+
+Se connecter au localhost:7474 et changer le mot de passe en mettant "supersecret"
+
+Importer mes données:
+python3 import_data_devoir2.py
+
+Voilà, tout est bon! :)
+
